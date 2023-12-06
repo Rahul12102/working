@@ -1,0 +1,16 @@
+.header{
+    height: 280px;
+    margin: 40px 70px;
+    display: flex;
+    background-color: lightgray;
+}
+
+.class6{
+    width: 420px;
+margin-left: 50px;
+    text-align: center;
+}
+
+h1{
+    font-size: 40px;
+}
