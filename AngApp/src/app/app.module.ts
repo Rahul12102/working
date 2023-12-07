@@ -7,6 +7,7 @@ import { ContainerComponent } from './container/container.component';
 import { HeaderComponent } from './header/header.component';
 import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,11 @@ import { SearchComponent } from './search/search.component';
     ContainerComponent,
     HeaderComponent,
     NotificationComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
