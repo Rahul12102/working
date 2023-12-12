@@ -1,0 +1,17 @@
+.class7{
+    font-size: 17px;
+    height: 4;
+    color: white;
+    margin: 80px 0px;
+    padding: 1px 0px;
+    text-align: center;
+    background-color: burlywood;
+}
+
+.close{
+    /* float: right; */
+    margin-left: 720px;
+    margin-bottom: 80px;
+    
+    position: absolute ;
+}

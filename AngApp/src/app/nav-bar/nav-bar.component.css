@@ -1,17 +1,16 @@
 .class1{
     display: flex;
-    /* margin: 5px 15px; */
     background-color: orange;
 }
 
 .class2{
-    /* margin: 5px 15px; */
     padding: 5px 30px;
     color: red;
 }
 
 .class3{
-    padding: 15px 20px;
+    font-size: 16px;
+    padding: 27px 20px;
     margin-left: 150px;
 }
 

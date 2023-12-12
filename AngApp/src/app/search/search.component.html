@@ -1,0 +1,7 @@
+<div class="class8">
+    <span><b>Search: </b></span>
+    <!-- (input) and span here showing event binding -->
+    <!-- <input type="text" (input)="changeSearchValue($event)"> --><!-- Keep this line assistise bcz here in this line we are using event binding. -->
+    <input type="text" [(ngModel)]="searchValue" >
+    <span>You Searched for ' {{ searchValue }} '</span>
+</div>
