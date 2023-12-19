@@ -36,4 +36,27 @@ export class CoursesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getTotalCourses(){
+    return this.courses.length;
+  }
+  getTotalFreeCourses(){
+    return this.courses.filter(course => course.type === 'Free').length;
+  }
+  getTotalPremiumCourses(){
+    return this.courses.filter(course => course.type === 'Premium').length;
+  }
+
+  courseCountRadioButton: string = 'All';
+  searchText: string ='';  
+
+  onFilterRadioButtonChanged(data: string){
+    this.courseCountRadioButton = data;
+    console.log(this.courseCountRadioButton);
+  }
+
+  onSearchTextEntered(searchValue: string){
+    this.searchText= searchValue;
+    console.log(this.searchText);
+  }
+
 }

@@ -1,28 +1,38 @@
 <div>
-    <app-search></app-search>
-    <app-filter></app-filter>
+    <app-search
+    (enteredSearchValueChanged)="onSearchTextEntered($event)"></app-search>
+    <app-filter 
+    [all]="getTotalCourses()"
+    [free]="getTotalFreeCourses()"
+    [premium]="getTotalPremiumCourses()"
+    (filterRadioButtonSelectionChanged)="onFilterRadioButtonChanged($event)"></app-filter>
 </div>
-<div class="course-container" *ngFor="let course of courses">
-    <div class="course-card">
-        <div>
-            <img [src]="course.image" style="width:220px; height:140px;">
-        </div>
+<ng-container *ngFor="let course of courses">
+<!-- the down line is for filter ngIF condition and current uncomment line is for search component. -->
+    <!-- <div class="course-container" *ngIf="courseCountRadioButton === 'All' || courseCountRadioButton === course.type"> -->
 
-        <div class="course-name"><h4>{{course.name}}</h4>
+    <div class="course-container" *ngIf="searchText ==='' || course.name.toLowerCase().includes(searchText)">
+        <div class="course-card">
+            <div>
+                <img [src]="course.image" style="width:220px; height:140px;">
+            </div>
+            
+            <div class="course-name"><h4>{{course.name}}</h4>
+            </div>
+            <div class="course.description"><p>{{course.description}}</p>
+            </div>
+            <div class="details">
+                <div class="course-type" [ngStyle]="{color: course.type === 'Free' ? 'Green' : 'Red'}">{{course.type}}</div>
+                <div class="course-price"><b>Price: </b>${{course.price}}</div>
+            </div>
+            <div class="course-buttons">
+                <button class="btn btn-buy">Buy Now</button>
+                <button class="btn btn-show">Show Details</button>
+                <br>
+                <br>
+                <br>
+            </div>
         </div>
-        <div class="course.description"><p>{{course.description}}</p>
-        </div>
-        <div class="details">
-            <div class="course-type" [ngStyle]="{color: course.type === 'Free' ? 'Green' : 'Red'}">{{course.type}}</div>
-            <div class="course-price"><b>Price: </b>${{course.price}}</div>
-        </div>
-        <div class="course-buttons">
-            <button class="btn btn-buy">Buy Now</button>
-            <button class="btn btn-show">Show Details</button>
-            <br>
-            <br>
-            <br>
-        </div>
+        
     </div>
-
-</div>
+</ng-container>
