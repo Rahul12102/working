@@ -1,0 +1,11 @@
+.app-component{
+    text-align: center;
+    border: 2px solid black;
+    padding: 40px 0px;
+    margin: 30px 10px;
+}
+
+.component-container{
+ display: flex;
+ text-align: center;
+}
