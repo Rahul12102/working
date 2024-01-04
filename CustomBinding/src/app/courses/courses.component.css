@@ -1,0 +1,39 @@
+.course-container{
+    display: inline-flex;
+}
+
+.course-card{
+    width: 220px;
+    height: 320px;
+    margin: 40px 10px;
+}
+
+.course-name{
+    text-align: center;
+}
+
+/* .course-description{
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background-color: green;
+    font-size: 100px;
+} */
+
+.details{
+    display: flex;
+    margin: 10px 10px;
+    
+}
+
+.course-type{
+    width: 40%;
+    font-weight: bold;
+}
+
+.course-buttons{
+ display: flex;   
+}
+
+.btn{
+    
+}
