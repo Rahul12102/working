@@ -7,9 +7,12 @@
   <p>This is a demo HTML content to understand @HostListener in Angular.</p>
 </div>
 
-<div  class="container" appBetter>
+<div  class="container" [appBetter]="'orange'" [defaultColor] = "'yellow'" [title]="'Example title'">
   <p>This is a demo HTML content to understand @HostBinding in Angular.</p>
 </div>
 
 
+<div appClass []>
+  <p>This is a demo HTML content to understand how to create custom ngClass directive in Angular.</p>
+</div>
 <!-- setBackground -->
